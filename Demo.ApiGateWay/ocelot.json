@@ -1,0 +1,31 @@
+﻿{
+  // 静态配置文件
+  "ReRoutes": [
+    // API ClientService
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5001"
+        }
+      ],
+      "UpstreamPathTemplate": "/ClientService/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    // API ProductService
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": "5002"
+        }
+      ],
+      "UpstreamPathTemplate": "/ProductService/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    }
+  ]
+}

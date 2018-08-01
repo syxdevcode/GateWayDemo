@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Demo.ApiGateWay
+namespace Demo.ClientService
 {
     public class Program
     {
@@ -19,11 +19,8 @@ namespace Demo.ApiGateWay
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://localhost:5001")
                 .UseStartup<Startup>()
-                .UseUrls("http://localhost:5000")
-                .ConfigureAppConfiguration((hostingContext, builder) =>
-                {
-                    builder.AddJsonFile("ocelot.json", false, true);
-                });
+            ;
     }
 }
