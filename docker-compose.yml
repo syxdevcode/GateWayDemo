@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  demo.clientservice:
+    image: ${DOCKER_REGISTRY}democlientservice
+    build:
+      context: .
+      dockerfile: Demo.ClientService/Dockerfile
+  demo.productservice:
+    image: ${DOCKER_REGISTRY}demoproductservice
+    build:
+      context: .
+      dockerfile: Demo.ProductService/Dockerfile

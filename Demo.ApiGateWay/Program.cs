@@ -23,7 +23,11 @@ namespace Demo.ApiGateWay
                 .UseUrls("http://localhost:5000")
                 .ConfigureAppConfiguration((hostingContext, builder) =>
                 {
-                    builder.AddJsonFile("ocelot.json", false, true);
+                    // 静态配置
+                    //builder.AddJsonFile("ocelot.json", false, true);
+
+                    // consul服务发现
+                    builder.AddJsonFile("ocelot-consul.json", false, true);
                 });
     }
 }
