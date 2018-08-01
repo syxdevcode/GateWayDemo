@@ -30,7 +30,7 @@
   "GlobalConfiguration": {
     //"BaseUrl": "https://api.mybusiness.com"
     "ServiceDiscoveryProvider": {
-      "Host": "192.168.0.100", // Consul Service IP
+      "Host": "192.168.0.169", // Consul Service IP
       "Port": 8500 // Consul Service Port
     }
   }
