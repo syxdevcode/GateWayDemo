@@ -11,7 +11,7 @@ services:
     build:
       context: .
       dockerfile: Demo.ProductService/Dockerfile
-   demo.apigateway:
+  demo.apigateway:
     image: ${DOCKER_REGISTRY}apigateway
     build:
       context: .
