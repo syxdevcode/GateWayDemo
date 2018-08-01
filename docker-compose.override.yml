@@ -11,3 +11,8 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "5002:5002"
+  demo.apigateway:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "5000:5000"
