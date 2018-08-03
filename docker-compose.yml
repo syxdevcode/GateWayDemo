@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Demo.ClientService/Dockerfile
-   demo.clientservice1:
+  demo.clientservice1:
     image: ${DOCKER_REGISTRY}democlientservice1
     build:
       context: .
