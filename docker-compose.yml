@@ -8,6 +8,7 @@ services:
       dockerfile: Demo.ClientService/Dockerfile
     depends_on:
       - demo.productservice
+      - demo.apigateway
   demo.clientservice1:
     image: ${DOCKER_REGISTRY}democlientservice1
     build:
@@ -15,6 +16,7 @@ services:
       dockerfile: Demo.ClientService1/Dockerfile
     depends_on:
       - demo.clientservice
+      - demo.apigateway
   demo.productservice:
     image: ${DOCKER_REGISTRY}demoproductservice
     build:
