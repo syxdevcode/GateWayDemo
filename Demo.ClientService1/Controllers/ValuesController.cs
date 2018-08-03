@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Demo.ClientService.Controllers
+namespace Demo.ClientService1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -14,14 +14,14 @@ namespace Demo.ClientService.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "ClientService-value1", "ClientService-value2" };
+            return new string[] { "ClientService1-value1", "ClientService1-value2" };
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
         public string[] Get(int id)
         {
-            return new string[] { $"ClinetService: {DateTime.Now.ToString()} {Environment.MachineName} " +
+            return new string[] { $"ClinetService1: {DateTime.Now.ToString()} {Environment.MachineName} " +
                 $"OS: {Environment.OSVersion.VersionString}" };
         }
 

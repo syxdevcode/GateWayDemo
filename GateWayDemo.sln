@@ -5,9 +5,9 @@ VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.ApiGateWay", "Demo.ApiGateWay\Demo.ApiGateWay.csproj", "{7F032AF4-F097-4A09-8F0A-27483CEE933D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.ClientService", "Demo.ClientService\Demo.ClientService.csproj", "{0C5286AE-2C4B-47B2-8543-33549CDBF451}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.ClientService", "Demo.ClientService\Demo.ClientService.csproj", "{0C5286AE-2C4B-47B2-8543-33549CDBF451}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.ProductService", "Demo.ProductService\Demo.ProductService.csproj", "{914135DA-C6C3-4B51-83E3-2387BCDC8C26}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.ProductService", "Demo.ProductService\Demo.ProductService.csproj", "{914135DA-C6C3-4B51-83E3-2387BCDC8C26}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{30A89C8B-EC1E-4838-9BBA-0158A041C754}"
 EndProject
