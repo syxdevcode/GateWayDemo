@@ -1,19 +1,5 @@
-FROM microsoft/dotnet:2.1-aspnetcore-runtime AS base
+FROM microsoft/dotnet:2.1-aspnetcore-runtime
 WORKDIR /app
-EXPOSE 80
-
-FROM microsoft/dotnet:2.1-sdk AS build
-WORKDIR /src
-COPY Demo.ClientService/Demo.ClientService.csproj Demo.ClientService/
-RUN dotnet restore Demo.ClientService/Demo.ClientService.csproj
 COPY . .
-WORKDIR /src/Demo.ClientService
-RUN dotnet build Demo.ClientService.csproj -c Release -o /app
-
-FROM build AS publish
-RUN dotnet publish Demo.ClientService.csproj -c Release -o /app
-
-FROM base AS final
-WORKDIR /app
-COPY --from=publish /app .
+EXPOSE 80
 ENTRYPOINT ["dotnet", "Demo.ClientService.dll"]
