@@ -5,7 +5,20 @@
       "UseServiceDiscovery": true, // use Consul service discovery
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "ServiceName": "Demo.ClientService",// 与consul服务名称一致
+      "ServiceName": "Demo.ClientService", // 与consul服务名称一致
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin"
+      },
+      "UpstreamPathTemplate": "/api/clientservice/{url}",
+      "UpstreamHttpMethod": [ "Get", "Post" ],
+      "ReRoutesCaseSensitive": false // non case sensitive
+    },
+    // API ClientService1
+    {
+      "UseServiceDiscovery": true, // use Consul service discovery
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "ServiceName": "Demo.ClientService", // 与consul服务名称一致
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       },
