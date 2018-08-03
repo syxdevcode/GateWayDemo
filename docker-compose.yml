@@ -6,16 +6,22 @@ services:
     build:
       context: .
       dockerfile: Demo.ClientService/Dockerfile
+   depends_on:
+      - demo.clientservice
   demo.clientservice1:
     image: ${DOCKER_REGISTRY}democlientservice1
     build:
       context: .
       dockerfile: Demo.ClientService1/Dockerfile
+   depends_on:
+      - demo.clientservice1
   demo.productservice:
     image: ${DOCKER_REGISTRY}demoproductservice
     build:
       context: .
       dockerfile: Demo.ProductService/Dockerfile
+   depends_on:
+      - demo.apigateway
   demo.apigateway:
     image: ${DOCKER_REGISTRY}apigateway
     build:
