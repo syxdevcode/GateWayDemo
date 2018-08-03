@@ -5,7 +5,7 @@
       "UseServiceDiscovery": true, // use Consul service discovery
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "ServiceName": "Demo.ClientService",
+      "ServiceName": "Demo.ClientService",// 与consul服务名称一致
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       },
@@ -18,7 +18,7 @@
       "UseServiceDiscovery": true, // use Consul service discovery
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "ServiceName": "Demo.ProductService",
+      "ServiceName": "Demo.ProductService", // 与consul服务名称一致
       "LoadBalancerOptions": {
         "Type": "RoundRobin"
       },
@@ -30,7 +30,7 @@
   "GlobalConfiguration": {
     //"BaseUrl": "https://api.mybusiness.com"
     "ServiceDiscoveryProvider": {
-      "Host": "192.168.0.186", // Consul Service IP
+      "Host": "192.168.0.199", // Consul Service IP
       "Port": 8500, // Consul Service Port,
       "Type": "Consul"
     }
