@@ -27,10 +27,10 @@ namespace Demo.ApiGateWay
                     //builder.AddJsonFile("ocelot.json", false, true);
 
                     // consul服务发现
-                    //builder.AddJsonFile("ocelot-consul.json", false, true);
+                    builder.AddJsonFile("ocelot-consul.json", false, true);
 
                     // 动态路由
-                    builder.AddJsonFile("Ocelot-DynamicRouting.json", false, true);
+                    //builder.AddJsonFile("Ocelot-DynamicRouting.json", false, true);
                 });
     }
 }

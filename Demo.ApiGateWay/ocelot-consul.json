@@ -1,6 +1,17 @@
 ﻿{
   "ReRoutes": [
     // API ClientService
+    // --> swagger part
+    {
+      "DownstreamPathTemplate": "/doc/clientservice/swagger.json",
+      "DownstreamScheme": "http",
+      "ServiceName": "Demo.ClientService",
+      "LoadBalancer": "RoundRobin",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/doc/clientservice/swagger.json",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    },
+    // --> service part
     {
       "UseServiceDiscovery": true, // use Consul service discovery
       "DownstreamPathTemplate": "/api/{url}",
@@ -30,6 +41,17 @@
       "ReRoutesCaseSensitive": false // non case sensitive
     },
     // API ProductService
+    // --> swagger part
+    {
+      "DownstreamPathTemplate": "/doc/productservice/swagger.json",
+      "DownstreamScheme": "http",
+      "ServiceName": "Demo.productservice",
+      "LoadBalancer": "RoundRobin",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/doc/productservice/swagger.json",
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    },
+    // --> service part
     {
       "UseServiceDiscovery": true, // use Consul service discovery
       "DownstreamPathTemplate": "/api/{url}",
